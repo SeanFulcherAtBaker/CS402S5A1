@@ -50,7 +50,7 @@
 
         <controls:PageHeader x:Name="pageHeader"  Text="Main Page">
             <Interactivity:Interaction.Behaviors>
-                <Behaviors:EllipsisBehavior Visibility="Collapsed"/>
+                <Behaviors:EllipsisBehavior Visibility="Auto"/>
             </Interactivity:Interaction.Behaviors>
             <RelativePanel.AlignLeftWithPanel>True</RelativePanel.AlignLeftWithPanel>
             <RelativePanel.AlignRightWithPanel>True</RelativePanel.AlignRightWithPanel>

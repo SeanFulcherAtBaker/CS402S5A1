@@ -62,12 +62,15 @@
             <StackPanel>
                 <Button>
                     <Interactivity:Interaction.Behaviors>
+                        <Behaviors:BackButtonBehavior Handled="True">
+                            <Core:ChangePropertyAction Value="Red" PropertyName="Background"/>
+                        </Behaviors:BackButtonBehavior>
                         <Behaviors:NavButtonBehavior Frame="{x:Bind Frame}"/>
                     </Interactivity:Interaction.Behaviors>
                     <SymbolIcon Symbol="Back"/>
                 </Button>
-                <TextBlock Style="{StaticResource TitleTextBlockStyle}" Text="You passed:" />
-                <TextBlock Style="{StaticResource SubtitleTextBlockStyle}" Text="{x:Bind ViewModel.Value, Mode=OneWay, FallbackValue=DesigntimeValue}" />
+                <!--<TextBlock Style="{StaticResource TitleTextBlockStyle}" Text="You passed:" />
+                <TextBlock Style="{StaticResource SubtitleTextBlockStyle}" Text="{x:Bind ViewModel.Value, Mode=OneWay, FallbackValue=DesigntimeValue}" />-->
             </StackPanel>
         </ScrollViewer>
 

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsAppCS402S5A1_Vid1_2", "WindowsAppCS402S5A1\WindowsAppCS402S5A1_Vid1_2.csproj", "{EE6AE9DF-88E7-45EB-B379-FF33F1534C90}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsAppCS402S5A1", "WindowsAppCS402S5A1\WindowsAppCS402S5A1.csproj", "{EE6AE9DF-88E7-45EB-B379-FF33F1534C90}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
