@@ -84,7 +84,7 @@
                     </Core:EventTriggerBehavior>-->
                 </Interactivity:Interaction.Behaviors>
             </TextBox>
-            
+             
         </controls:Resizer>
 
         <Button x:Name="submitButton"
