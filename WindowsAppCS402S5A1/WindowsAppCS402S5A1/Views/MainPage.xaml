@@ -44,6 +44,7 @@
                         <!--  TODO: change properties for wide view  -->
                         <Setter Target="stateTextBox.Text" Value="Wide Visual State" />
                     </VisualState.Setters>
+                    
                 </VisualState>
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
@@ -78,12 +79,12 @@
                         <Core:CallMethodAction MethodName="GotoDetailsPage" TargetObject="{Binding}" />
                     </Behaviors:KeyBehavior>
                     <!--  focus on textbox when page loads  -->
-                    <Core:EventTriggerBehavior>
+                    <!--<Core:EventTriggerBehavior>
                         <Behaviors:FocusAction />
-                    </Core:EventTriggerBehavior>
+                    </Core:EventTriggerBehavior>-->
                 </Interactivity:Interaction.Behaviors>
             </TextBox>
-
+            
         </controls:Resizer>
 
         <Button x:Name="submitButton"

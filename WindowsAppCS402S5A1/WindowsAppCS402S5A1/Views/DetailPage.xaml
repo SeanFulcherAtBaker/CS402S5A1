@@ -10,7 +10,12 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:vm="using:WindowsAppCS402S5A1.ViewModels" x:Name="ThisPage"
       mc:Ignorable="d">
+    <!--<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>-->
     <Page.DataContext>
         <vm:DetailPageViewModel x:Name="ViewModel" />
     </Page.DataContext>
@@ -53,27 +58,53 @@
                              RelativePanel.AlignTopWithPanel="True" Text="Detail Page" />
 
         <!--  content  -->
-        
+        <!--<Grid Grid.Row="1" Padding="12,4,0,0">-->
         <ScrollViewer Padding="12,8,0,0" RelativePanel.AlignBottomWithPanel="True"
                       RelativePanel.AlignLeftWithPanel="True"
                       RelativePanel.AlignRightWithPanel="True"
                       RelativePanel.Below="pageHeader"
                       VerticalScrollBarVisibility="Auto">
             <StackPanel>
-                <Button>
+                <!--<Button>
                     <Interactivity:Interaction.Behaviors>
                         <Behaviors:BackButtonBehavior Handled="True">
-                            <Core:ChangePropertyAction Value="Red" PropertyName="Background"/>
+                            <Core:ChangePropertyAction PropertyName="Background"/>
                         </Behaviors:BackButtonBehavior>
                         <Behaviors:NavButtonBehavior Frame="{x:Bind Frame}"/>
                     </Interactivity:Interaction.Behaviors>
                     <SymbolIcon Symbol="Back"/>
                 </Button>
-                <!--<TextBlock Style="{StaticResource TitleTextBlockStyle}" Text="You passed:" />
+                <TextBlock Style="{StaticResource TitleTextBlockStyle}" Text="You passed:" />
                 <TextBlock Style="{StaticResource SubtitleTextBlockStyle}" Text="{x:Bind ViewModel.Value, Mode=OneWay, FallbackValue=DesigntimeValue}" />-->
+
+                <Button Content="Do something desktop-only" Visibility="Collapsed">
+                    <Interactivity:Interaction.Behaviors>
+                        <Behaviors:DeviceDispositionBehavior Desktop="True">
+                            <Core:ChangePropertyAction PropertyName="Visibility" Value="Visible" />
+                        </Behaviors:DeviceDispositionBehavior>
+                    </Interactivity:Interaction.Behaviors>
+                </Button>
+                <Button Content="Do something phone-only" Visibility="Collapsed">
+                    <Interactivity:Interaction.Behaviors>
+                        <Behaviors:DeviceDispositionBehavior Virtual="True" Phone="True">
+                            <Core:ChangePropertyAction PropertyName="Visibility" Value="Visible" />
+                        </Behaviors:DeviceDispositionBehavior>
+                    </Interactivity:Interaction.Behaviors>
+                </Button>
+                <Button Content="Do something continuum-only" Visibility="Collapsed">
+                    <Interactivity:Interaction.Behaviors>
+                        <Behaviors:DeviceDispositionBehavior Continuum="True">
+                            <Core:ChangePropertyAction PropertyName="Visibility" Value="Visible" />
+                        </Behaviors:DeviceDispositionBehavior>
+                    </Interactivity:Interaction.Behaviors>
+                </Button>
+
+                
             </StackPanel>
         </ScrollViewer>
-
+        <!--</Grid>-->
     </RelativePanel>
+    <!--</Grid>-->
 </Page>
+   
 
